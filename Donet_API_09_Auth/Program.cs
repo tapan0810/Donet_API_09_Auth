@@ -1,4 +1,5 @@
 using Donet_API_09_Auth.Data;
+using Donet_API_09_Auth.Services;
 using Microsoft.EntityFrameworkCore;
 using Scalar.AspNetCore;
 
@@ -11,6 +12,7 @@ builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 builder.Services.AddDbContext<AppDbContext>(options
     => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddScoped<IAuthService,AuthService>();
 
 var app = builder.Build();
 
