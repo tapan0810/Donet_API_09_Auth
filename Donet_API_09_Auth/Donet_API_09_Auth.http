@@ -1,0 +1,6 @@
+@Donet_API_09_Auth_HostAddress = http://localhost:5027
+
+GET {{Donet_API_09_Auth_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
